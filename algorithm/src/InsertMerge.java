@@ -5,7 +5,7 @@ public class InsertMerge {
         int[][] result = new int[intervals.length + 1][2];
         int len = 0;
         for(int i=0; i< intervals.length; i++){
-            if(newInterval[0] > intervals[i][0]) {
+            if(newInterval[0] <= intervals[i][0]) {
                 System.arraycopy(intervals, 0, result, 0, i);
                 if (intervals[i][1] >= newInterval[0]) {
                     int head = Math.min(intervals[i][0], newInterval[0]);
